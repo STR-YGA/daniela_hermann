@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
 
 :root {
@@ -18,16 +15,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    box-sizing: border-box;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
 }
 
 .cabecalho {
-    padding: 2% 0% 0% 15%;
+    padding: 2% 5%;
 }
 
 .cabecalho__menu {
@@ -44,17 +42,15 @@ body {
 }
 
 .apresentacao {
-    padding: 6% 15%;
+    padding: 6% 5%;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
 }
 
 .apresentacao__conteudo {
-    /* width: 615px; */
     max-width: 600px;
     width: 100%;
     display: flex;
@@ -92,14 +88,15 @@ body {
     font-family: var(--fonte-primaria);
     font-weight: 400;
     font-size: 24px;
+    text-align: center;
 }
 
 .apresentacao__links__link {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 16px;
     border: 2px solid var(--cor-terciaria);
-    /* width: 378px; */
     max-width: 100%;
     width: 100%;
     text-align: center;
@@ -115,7 +112,7 @@ body {
 .apresentacao__links__link:hover {
     background-color: var(--cor-fundo_botoes);
     color: var(--cor-adicional);
-    border:2px solid var(--cor-adicional);
+    border: 2px solid var(--cor-adicional);
 }
 
 .apresentacao__foto {
@@ -124,7 +121,6 @@ body {
     max-width: 100%;
     height: auto;
 }
-
 
 .rodape {
     padding: 24px;
@@ -136,6 +132,7 @@ body {
     font-weight: 400;
 }
 
+/* RESPONSIVIDADE PARA CELULARES */
 @media (max-width: 768px) {
     .cabecalho {
         padding: 5%;
@@ -144,6 +141,12 @@ body {
     .cabecalho__menu {
         flex-direction: column;
         gap: 24px;
+        align-items: center;
+    }
+
+    .apresentacao {
+        flex-direction: column;
+        align-items: center;
     }
 
     .apresentacao__conteudo__titulo,
@@ -153,9 +156,5 @@ body {
     .rodape {
         font-size: 18px;
         text-align: center;
-    }
-
-    .apresentacao {
-        flex-direction: column;
     }
 }
